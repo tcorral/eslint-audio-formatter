@@ -1,0 +1,42 @@
+{
+  "name": "eslint-audio-formatter",
+  "version": "0.1.0",
+  "description": "Simple audio formatter/reporter for EsLint to get a mp3 files with all the errors and warnings.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcorral/eslint-audio-formatter.git"
+  },
+  "keywords": [
+    "eslint",
+    "formatter",
+    "audio",
+    "mp3"
+  ],
+  "author": "Tomas Corral <amischol@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcorral/eslint-audio-formatter/issues"
+  },
+  "homepage": "https://github.com/tcorral/eslint-audio-formatter#readme",
+  "dependencies": {
+    "audiosprite": "^0.6.0",
+    "q": "^1.4.1",
+    "say": "^0.9.0",
+    "temp": "^0.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0"
+  }
+}
