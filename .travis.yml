@@ -13,8 +13,8 @@ node_js:
   - "0.6"
   - "iojs"
 before_install:
-  - sudo echo deb http://www.deb-multimedia.org testing main non-free >>/etc/apt/sources.list
+  - sudo apt-get install festival festvox-kallpc16k
   - sudo apt-get update
-  - sudo apt-get install deb-multimedia-keyring
+  - sudo apt-get install libav-tools
   - sudo apt-get update
   - sudo apt-get install ffmpeg
