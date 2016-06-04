@@ -22,11 +22,6 @@ Once you have the mp3 file you can use other robots:
 
 TODO - Implement internationalization on messages so that you can listen the messages in your own language.
 
-## Examples of the output
-
-* [without-errors.mp3](https://raw.githubusercontent.com/tcorral/eslint-audio-formatter/master/test/expected/without-errors.mp3)
-* [with-syntax-errors.mp3](https://raw.githubusercontent.com/tcorral/eslint-audio-formatter/master/test/expected/with-syntax-errors.mp3)
-
 ## Installation
 
 ### Dependencies:
