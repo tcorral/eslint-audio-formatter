@@ -2,8 +2,23 @@ var temp = require('temp');
 var q = require('q');
 var text2speech = require('../src/libs/text2speech');
 var path = require('path');
+var minimist = require('minimist');
 
+function isExecutedByESLint() {
+  var argument;
+  for(var index = 0, len = process.argv.length; index < len; index++) {
+    argument = process.argv[index];
+    if(path.basename(argument) === 'eslint') {
+      return true;
+    }
+  }
+  return false;
+}
 module.exports = function (report) {
+  var restArgs = process.argv.slice(process.argv.indexOf('--') + 1);
+  var parsedArgs = minimist(restArgs);
+  var voice = parsedArgs['eff-voice'] || 'Alex';
+  var speed = parseFloat(parsedArgs['eff-speed']) || 0.75;
   var deferred = q.defer();
   var errorCount = 0;
   var warningCount = 0;
@@ -29,7 +44,7 @@ module.exports = function (report) {
     messages.forEach(function (message) {
       var info = temp.openSync({prefix: "jssl", suffix: ".wav"});
       clips.push(info.path);
-      promises.push(text2speech.createVoiceMessage(message, info, clips));
+      promises.push(text2speech.createVoiceMessage(message, voice, speed, info, clips));
     });
 
     q.all(promises)
@@ -45,5 +60,7 @@ module.exports = function (report) {
         });
   });
 
-  return deferred.promise;
+  if(!isExecutedByESLint()) {
+    return deferred.promise;
+  }
 };

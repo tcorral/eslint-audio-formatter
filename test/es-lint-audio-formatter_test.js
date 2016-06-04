@@ -19,7 +19,7 @@ exports['es-lint-audio-formatter'] = {
 
     fs.readFile(input, 'utf8', function (err, code) {
       if(err) {
-        test.done();
+        return test.done();
       }
       var formatter = cli.getFormatter(cwd + '/src/index.js');
       var report = cli.executeOnText(code);
@@ -47,7 +47,7 @@ exports['es-lint-audio-formatter'] = {
 
     fs.readFile(input, 'utf8', function (err, code) {
       if(err) {
-        test.done();
+        return test.done();
       }
       var formatter = cli.getFormatter(cwd + '/src/index.js');
       var report = cli.executeOnText(code);

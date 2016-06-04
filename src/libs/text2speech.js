@@ -8,9 +8,9 @@ temp.track();
 
 var text2speech = {
   audiosprite: audiosprite,
-  createVoiceMessage: function (message, info, clips) {
+  createVoiceMessage: function (message, voice, speed, info, clips) {
     var deferred = q.defer();
-    say.export(message, 'Alex', 0.75, info.path, function(err) {
+    say.export(message, voice, speed, info.path, function(err) {
       if (err) {
         deferred.reject(err);
       }

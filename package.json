@@ -27,6 +27,7 @@
   "homepage": "https://github.com/tcorral/eslint-audio-formatter#readme",
   "dependencies": {
     "audiosprite": "^0.6.0",
+    "minimist": "^1.2.0",
     "q": "^1.4.1",
     "say": "^0.9.0",
     "temp": "^0.8.3"

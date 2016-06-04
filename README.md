@@ -85,7 +85,7 @@ In the command line
 
 ```bash
 # just make sure you pass the path to the module to the format option of eslint
-eslint.js --format './node_modules/eslint-audio-formatter/index.js' index.js
+eslint --format './node_modules/eslint-audio-formatter/index.js' index.js
 ```
 
 Or as a module
@@ -144,6 +144,40 @@ grunt.initConfig({
 ```
 
 To get more information I recommend to read the use cases in tests.
+
+## Formatter parameters
+
+When executed with EsLint we can pass arguments to change the voice and speed.
+
+To pass variables to the formatter you have to add a double dash at the end of the eslint command.
+
+```
+eslint --format './node_modules/eslint-audio-formatter' './test/data/with-syntax-errors.js' -- --eff-voice=Vicki --eff-speed=1
+```
+
+~~Eslint [does not support passing parameters to formatters from the cli](https://github.com/eslint/eslint/issues/2989) yet.So in order
+to pass parameters to the formatter we will have to rely on **environment variables**~~
+
+### Command line options
+
+#### --eff-voice
+
+This option requires one of the available voices in [say.js](https://github.com/marak/say.js/#os-x-notes)
+
+```bash
+eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eff-voice=Vicki    # notice the --
+```
+
+#### --eff-speed
+
+This option changes the speed of the speech.
+
+```bash
+eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eff-speed=0.65    # notice the --
+```
+
+**Important**: don't forget to add the flag at the end and after `-- ` otherwise it will be interpreted as a eslint parameter and will fail as that parameter is not known to eslint.
+
 
 ## Tests
 
