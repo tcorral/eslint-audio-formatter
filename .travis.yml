@@ -1,3 +1,5 @@
+os:
+  - osx
 language: node_js
 node_js:
   - "5"
@@ -13,8 +15,4 @@ node_js:
   - "0.6"
   - "iojs"
 before_install:
-  - sudo apt-get install festival festvox-kallpc16k
-  - sudo apt-get update
-  - sudo apt-get install libav-tools
-  - sudo apt-get update
-  - sudo apt-get install ffmpeg
+  - brew install ffmpeg --with-theora --with-libogg --with-libvorbis
