@@ -14,6 +14,7 @@ function isExecutedByESLint() {
   }
   return false;
 }
+
 module.exports = function (report) {
   var restArgs = process.argv.slice(process.argv.indexOf('--') + 1);
   var parsedArgs = minimist(restArgs);
