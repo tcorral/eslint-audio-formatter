@@ -28,6 +28,8 @@ exports['es-lint-audio-formatter'] = {
         .then(function(outputFile) {
           fs.readFile(expectedFile, function(err, data) {
             fs.readFile(outputFile, function(err, data2) {
+              console.log(data.length);
+              console.log(data2.length);
               test.ok(data.equals(data2), 'Check that both files the generated and the expected are the same.');
               test.done();
             });
@@ -56,6 +58,8 @@ exports['es-lint-audio-formatter'] = {
         .then(function(outputFile) {
           fs.readFile(expectedFile, function(err, data) {
             fs.readFile(outputFile, function(err, data2) {
+              console.log(data.length);
+              console.log(data2.length);
               test.ok(data.equals(data2), 'Check that both files the generated and the expected are the same.');
               test.done();
             });
