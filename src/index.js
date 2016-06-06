@@ -18,8 +18,8 @@ function isExecutedByESLint() {
 module.exports = function (report) {
   var restArgs = process.argv.slice(process.argv.indexOf('--') + 1);
   var parsedArgs = minimist(restArgs);
-  var voice = parsedArgs['eff-voice'] || 'Alex';
-  var speed = parseFloat(parsedArgs['eff-speed']) || 0.75;
+  var voice = parsedArgs['eaf-voice'] || 'Alex';
+  var speed = parseFloat(parsedArgs['eaf-speed']) || 0.75;
   var deferred = q.defer();
   var errorCount = 0;
   var warningCount = 0;

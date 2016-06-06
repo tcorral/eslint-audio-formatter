@@ -147,7 +147,7 @@ When executed with EsLint we can pass arguments to change the voice and speed.
 To pass variables to the formatter you have to add a double dash at the end of the eslint command.
 
 ```
-eslint --format './node_modules/eslint-audio-formatter' './test/data/with-syntax-errors.js' -- --eff-voice=Vicki --eff-speed=1
+eslint --format './node_modules/eslint-audio-formatter' './test/data/with-syntax-errors.js' -- --eaf-voice=Vicki --eaf-speed=1
 ```
 
 ~~Eslint [does not support passing parameters to formatters from the cli](https://github.com/eslint/eslint/issues/2989) yet.So in order
@@ -155,20 +155,20 @@ to pass parameters to the formatter we will have to rely on **environment variab
 
 ### Command line options
 
-#### --eff-voice
+#### --eaf-voice
 
 This option requires one of the available voices in [say.js](https://github.com/marak/say.js/#os-x-notes)
 
 ```bash
-eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eff-voice=Vicki    # notice the --
+eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eaf-voice=Vicki    # notice the --
 ```
 
-#### --eff-speed
+#### --eaf-speed
 
 This option changes the speed of the speech.
 
 ```bash
-eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eff-speed=0.65    # notice the --
+eslint -f node_modules/eslint-audio-formatter client/**/*.js server/**/*.js -- --eaf-speed=0.65    # notice the --
 ```
 
 **Important**: don't forget to add the flag at the end and after `-- ` otherwise it will be interpreted as a eslint parameter and will fail as that parameter is not known to eslint.

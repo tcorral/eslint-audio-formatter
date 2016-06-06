@@ -1,7 +1,7 @@
 {
   "name": "eslint-audio-formatter",
-  "version": "0.1.1",
-  "description": "Simple audio formatter/reporter for EsLint to get a mp3 files with all the errors and warnings.",
+  "version": "0.1.3",
+  "description": "Audio formatter/reporter for EsLint to get a mp3 files with all the errors and warnings.",
   "main": "src/index.js",
   "directories": {
     "test": "test"
