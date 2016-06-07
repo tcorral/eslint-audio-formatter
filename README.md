@@ -47,7 +47,7 @@ npm install eslint-audio-formatter --save-dev
    ```javascript
    {
      "scripts": {
-       "eslint": "eslint --format 'node_modules/eslint-audio-formatter' file1 file2 dir1/ dir2/",
+       "eslint": "eslint --format 'node_modules/eslint-audio-formatter/src/index.js' file1 file2 dir1/ dir2/",
      }
    }
    ```
@@ -57,7 +57,7 @@ npm install eslint-audio-formatter --save-dev
    ```javascript
    {
      "scripts": {
-       "eslint": "eslint --format node_modules/eslint-audio-formatter file1 file2 dir1/ dir2/",
+       "eslint": "eslint --format node_modules/eslint-audio-formatter/src/index.js file1 file2 dir1/ dir2/",
      }
    }
    ```
